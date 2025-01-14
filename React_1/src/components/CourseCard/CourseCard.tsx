@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import '@/components/CourseCard/CourseCard.css';
 import ResponsiveImage from '@/components/ResponsiveImage/ResponsiveImage';

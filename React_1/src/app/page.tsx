@@ -1,3 +1,5 @@
+import Accordion from "@/components/Accordion/Accordion";
+import Counter from "@/components/Counter/Counter";
 import CourseCard from "@/components/CourseCard/CourseCard";
 
 const Home = () => {
@@ -11,6 +13,10 @@ const Home = () => {
           price={16583}
         />
       </section>
+
+      <Counter/>
+
+      <Accordion title="타이틀" content="컨텐츠"/>
     </>
   );
 }
