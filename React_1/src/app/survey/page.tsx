@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useCallback, useState } from 'react';
-import TextInput from '@/components/TextInput/TextInput';
-import Select from '@/components/Select/Select';
+import TextInput from '@/app/components/TextInput/TextInput';
+import Select from '@/app/components/Select/Select';
 
 const contryOptions = ["한국", "중국", "일본", "러시아", "미국"];
 

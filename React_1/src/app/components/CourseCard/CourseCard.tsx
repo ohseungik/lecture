@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import '@/components/CourseCard/CourseCard.css';
-import ResponsiveImage from '@/components/ResponsiveImage/ResponsiveImage';
+import '@/app/components/CourseCard/CourseCard.css';
+import ResponsiveImage from '@/app/components/ResponsiveImage/ResponsiveImage';
 
 type CourseCardProps = {
     imgSrc: string;

@@ -1,0 +1,11 @@
+.memoContainer {
+    @apply bg-red-300 flex-1;
+}
+
+.memoContainer .memoContainer__title {
+    @apply w-full box-border text-[2rem] ;
+}
+
+.memoContainer .memoContainer__content {
+    @apply w-full box-border text-[1.1rem] min-h-[600px];
+}

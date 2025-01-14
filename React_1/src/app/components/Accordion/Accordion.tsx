@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useCallback, useState } from 'react';
-import '@/components/Accordion/Accordion.css';
+import '@/app/components/Accordion/Accordion.css';
 
 type AccordionProps = {
     title: string;
@@ -17,13 +17,13 @@ const Accordion = ({ title, content } : AccordionProps) => {
 
     return (
         <div className='accordion'>
-            <div className='title' onClick={contentOpenHandler}>
+            <div className='accordion__title' onClick={contentOpenHandler}>
                 <div>{title}</div>
                 <div>{isOpen ? '-' : '+'}</div>
             </div>
 
             {isOpen && 
-                <div className='content'>{content}</div>
+                <div className='accordion__content'>{content}</div>
             }
         </div>
     )
