@@ -36,4 +36,4 @@ const CourseCard = ({ imgSrc, tags, name, price } : CourseCardProps) => {
     )
 }
 
-export default CourseCard;
+export default React.memo(CourseCard);

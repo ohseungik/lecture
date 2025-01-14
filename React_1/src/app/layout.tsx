@@ -1,10 +1,7 @@
+import React, { FC } from 'react';
 import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const RootLayout: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <html lang="ko">
       <body>
@@ -12,4 +9,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

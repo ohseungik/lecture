@@ -1,7 +1,7 @@
-.Accordion .title {
+.accordion .title {
     @apply bg-[#666] text-white font-bold p-[10px] flex justify-between;
 }
 
-.Accordion .content {
+.accordion .content {
     @apply border border-[#999] p-[20px];
 }

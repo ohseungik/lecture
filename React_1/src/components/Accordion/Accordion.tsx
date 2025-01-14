@@ -16,7 +16,7 @@ const Accordion = ({ title, content } : AccordionProps) => {
     }, [isOpen]);
 
     return (
-        <div className='Accordion'>
+        <div className='accordion'>
             <div className='title' onClick={contentOpenHandler}>
                 <div>{title}</div>
                 <div>{isOpen ? '-' : '+'}</div>
@@ -30,4 +30,4 @@ const Accordion = ({ title, content } : AccordionProps) => {
 }
 
 
-export default Accordion;
+export default React.memo(Accordion);

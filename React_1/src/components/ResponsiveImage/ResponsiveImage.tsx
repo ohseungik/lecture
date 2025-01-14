@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from "next/legacy/image";
 
@@ -14,4 +16,4 @@ const ResponsiveImage = ({ src, alt }: ResponsiveImageProps) => {
     )
 }
 
-export default ResponsiveImage;
+export default React.memo(ResponsiveImage);
