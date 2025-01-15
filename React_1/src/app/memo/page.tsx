@@ -43,11 +43,23 @@ const Memo = () => {
         ]);
 
         setSelectedMemo(memos.length);
-    }, [memos]);
+    }, [memos])
+
+    const deleteMemoHandler = useCallback((index: number) => {
+        const newMemos = [...memos];
+
+        newMemos.splice(index, 1);
+
+        setMemos(newMemos);
+
+        if(index === selectedMemo) {
+            setSelectedMemo(0);
+        }
+    }, [memos, selectedMemo])
 
     return (
         <div className='memo'>
-            <SideBar memos={memos} selectIndex={selectedMemo} setSelectedMemo={setSelectedMemo} addMemo={addMemoHandler} />
+            <SideBar memos={memos} selectIndex={selectedMemo} setSelectedMemo={setSelectedMemo} addMemo={addMemoHandler} deleteMemo={deleteMemoHandler}/>
             <MemoContainer memo={memos[selectedMemo]} setMemo={memoHandler}/>
         </div>
     )

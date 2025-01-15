@@ -1,5 +1,5 @@
 .sideBarFooter {
-    @apply text-center px-[10px] px-0;
+    @apply text-center py-[10px] px-0;
 }
 
 .sideBarFooter .sideBarFooter__addButton {

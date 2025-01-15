@@ -8,15 +8,16 @@ type MemoListProps = {
     memos: MemoPropsArray;
     selectIndex: number;
     setSelectedMemo: (index: number) => void;
+    deleteMemo: (index: number) => void;
 }
 
-const MemoList: React.FC<MemoListProps> = ({ memos, selectIndex, setSelectedMemo }) => {
+const MemoList: React.FC<MemoListProps> = ({ memos, selectIndex, setSelectedMemo, deleteMemo }) => {
     return (
         <>
             {memos.map((memo, index) => {
                 return (
                     <React.Fragment key={index}>
-                       <MemoItem index={index} title={memo.title} isSelected={index === selectIndex} setSelectedMemo={setSelectedMemo} />
+                       <MemoItem index={index} title={memo.title} isSelected={index === selectIndex} setSelectedMemo={setSelectedMemo} deleteMemo={deleteMemo} />
                     </React.Fragment>
                 )
             })}

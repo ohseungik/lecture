@@ -8,12 +8,18 @@ type MemoItemProps = {
     title: string;
     isSelected: boolean;
     setSelectedMemo: (index: number) => void;
+    deleteMemo: (index: number) => void;
 }
 
-const MemoItem: React.FC<MemoItemProps> = ({ index, title, isSelected, setSelectedMemo }) => {
+const MemoItem: React.FC<MemoItemProps> = ({ index, title, isSelected, setSelectedMemo, deleteMemo }) => {
     return (
         <div className={`memoItem ${isSelected ? 'isSelected' : ''}`} onClick={() => setSelectedMemo(index)}>
             {title}
+            <button className='memoItem__delete-button' onClick={(event) => {
+                event.stopPropagation();
+                event.preventDefault();
+                deleteMemo(index);
+            }}>X</button>
         </div>
     )
 }

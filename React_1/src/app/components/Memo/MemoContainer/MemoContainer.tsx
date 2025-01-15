@@ -5,6 +5,15 @@ import '@/app/components/Memo/MemoContainer/MemoContainer.css';
 import { MemoProps } from '@/app/types/memo';
 
 const MemoContainer = ({ memo, setMemo }: { memo: MemoProps, setMemo: (newMemo: MemoProps) => void }) => {
+    if(!memo) {
+        return (
+            <div>
+                <h1>메모가 없습니다</h1>
+                <h2>새로운 메모를 추가해주세요</h2>
+            </div>
+        )
+    }
+    
     return (
         <div className='memoContainer'>
             <div>

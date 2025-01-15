@@ -1,7 +1,15 @@
 .memoItem {
-    @apply w-full whitespace-nowrap overflow-hidden text-ellipsis;
+    @apply w-full whitespace-nowrap overflow-hidden text-ellipsis relative;
 }
 
 .memoItem.isSelected {
-    @apply bg-blue-200;
+    @apply bg-gray-300;
+}
+
+.memoItem .memoItem__delete-button {
+    @apply text-red-500 border-none absolute right-[5px] top-0 cursor-pointer hidden;
+}
+
+.memoItem:hover .memoItem__delete-button {
+    @apply inline-block;
 }
