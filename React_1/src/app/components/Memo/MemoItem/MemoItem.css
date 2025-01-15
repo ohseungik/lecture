@@ -1,0 +1,7 @@
+.memoItem {
+    @apply w-full whitespace-nowrap overflow-hidden text-ellipsis;
+}
+
+.memoItem.isSelected {
+    @apply bg-blue-200;
+}

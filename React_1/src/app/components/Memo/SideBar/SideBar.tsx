@@ -5,13 +5,14 @@ import { MemoPropsArray } from '@/app/types/memo';
 
 interface SideBarProps {
     memos: MemoPropsArray;
+    selectIndex: number;
     setSelectedMemo: (index: number) => void;
 }
 
-const SideBar: React.FC<SideBarProps> = ({ memos, setSelectedMemo }) => {
+const SideBar: React.FC<SideBarProps> = ({ memos, selectIndex, setSelectedMemo }) => {
     return (
         <div className='SideBar'>
-            <MemoList memos={memos} setSelectedMemo={setSelectedMemo}/>
+            <MemoList memos={memos} selectIndex={selectIndex} setSelectedMemo={setSelectedMemo}/>
         </div>
     )
 }

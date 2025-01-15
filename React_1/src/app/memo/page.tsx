@@ -33,7 +33,7 @@ const Memo = () => {
 
     return (
         <div className='memo'>
-            <SideBar memos={memos} setSelectedMemo={setSelectedMemo} />
+            <SideBar memos={memos} selectIndex={selectedMemo} setSelectedMemo={setSelectedMemo} />
             <MemoContainer memo={memos[selectedMemo]} setMemo={memoHandler}/>
         </div>
     )
