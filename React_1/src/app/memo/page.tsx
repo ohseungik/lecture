@@ -31,9 +31,23 @@ const Memo = () => {
         setMemos(newMemos);
     }, [memos, selectedMemo])
 
+    const addMemoHandler = useCallback((title: string, content: string) => {
+        setMemos([
+            ...memos,
+            {
+                title: title,
+                content: content,
+                createdAt: new Date().getTime(),
+                updatedAt: new Date().getTime()
+            }
+        ]);
+
+        setSelectedMemo(memos.length);
+    }, [memos]);
+
     return (
         <div className='memo'>
-            <SideBar memos={memos} selectIndex={selectedMemo} setSelectedMemo={setSelectedMemo} />
+            <SideBar memos={memos} selectIndex={selectedMemo} setSelectedMemo={setSelectedMemo} addMemo={addMemoHandler} />
             <MemoContainer memo={memos[selectedMemo]} setMemo={memoHandler}/>
         </div>
     )

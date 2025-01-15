@@ -1,0 +1,7 @@
+.sideBarFooter {
+    @apply text-center px-[10px] px-0;
+}
+
+.sideBarFooter .sideBarFooter__addButton {
+    @apply rounded-[100px] border-2 border-[#555] text-[#555] w-[30px] h-[30px] p-[10px] flex justify-center m-auto text-lg items-center cursor-pointer;
+}
