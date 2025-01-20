@@ -2,11 +2,12 @@
 
 import React from 'react';
 
-const Home = () => {
+const Completion = () => {
   return (
     <>
     </>
   );
+
 }
 
-export default Home;
+export default Completion;
