@@ -27,7 +27,7 @@ const QuestionBox: React.FC<QuestionBoxProps> = ({ question, questionLength, ste
         <>
             <Title>{question.title}</Title>
             <Desc>{question.desc}</Desc>
-            <Body type="text" answer={answer} setAnswer={setAnswer}/>
+            <Body type={question.type} answer={answer} setAnswer={setAnswer} options={question.options}/>
             <ActionButtons questionLength={questionLength} step={step}/>
         </>
     )

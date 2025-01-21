@@ -18,14 +18,27 @@ const Survey = ({ params }: {params: Promise<SurveyProps>}) => {
         desc: '설명1',
         type: 'text',
         requried: false,
-        options: {}
+        options: {
+          placeholder: "placeholder 입니다."
+        }
     },
     {
         title: '질문2',
         desc: '설명2',
-        type: 'text',
+        type: 'textarea',
         requried: true,
-        options: {}
+        options: {
+          placeholder: "placeholder 입니다."
+        }
+    },
+    {
+        title: '질문3',
+        desc: '설명3',
+        type: 'select',
+        requried: true,
+        options: {
+          items: ['답변1', '답변2', '답변3', '답변4']
+        }
     }
   ]
   

@@ -1,0 +1,19 @@
+.selectInput {
+    
+}
+
+.selectInput input[type='checkbox'] {
+    @apply hidden;
+}
+
+.selectInput input[type='checkbox'] ~ span {
+    @apply w-[24px] h-[24px] border-[3px] border-solid border-gray-500 box-border inline-block rounded-[100%];
+}
+
+.selectInput input[type='checkbox']:checked ~ span {
+    @apply border-[8px] border-blue-500; 
+}
+
+.selectInput div {
+    @apply bg-cyan-500;
+}

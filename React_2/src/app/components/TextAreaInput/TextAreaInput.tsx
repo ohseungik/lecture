@@ -1,9 +1,7 @@
-'use client'
-
 import React from 'react';
-import "@/app/components/TextInput/TextInput.css";
+import "@/app/components/TextAreaInput/TextAreaInput.css";
 
-interface TextInputProps {
+interface TextAreaInputProps {
     answer: string;
     setAnswer: (newAnswer: string) => void;
     options?: {
@@ -11,16 +9,16 @@ interface TextInputProps {
     };
 }
 
-const TextInput = ({ answer, setAnswer, options }: TextInputProps) => {
+const TextAreaInput = ({ answer, setAnswer, options }: TextAreaInputProps) => {
     return (
       <input
         type="text"
         value={answer || ""}
         onChange={(event) => setAnswer(event.target.value)}
-        className='TextInput'
+        className='TextAreaInput'
         placeholder={options?.placeholder}
       />
-    );
+    )
 }
 
-export default TextInput;
+export default TextAreaInput;
