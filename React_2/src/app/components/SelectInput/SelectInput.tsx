@@ -2,23 +2,35 @@ import React from 'react';
 import "@/app/components/SelectInput/SelectInput.css";
 
 interface SelectInputProps {
-    answer: string;
-    setAnswer: (newAnswer: string) => void;
+    answer: number[];
+    setAnswer: (newAnswer: number[]) => void;
     options?: {
         items: string[];
     };
 }
 
-const SelectInput = ({ answer, setAnswer, options } : SelectInputProps) => {
+const SelectInput = ({ answer = [], setAnswer, options } : SelectInputProps) => {
+
+    const handleChange = (isChecked: boolean, index: number) => { 
+        console.log(answer);
+
+        if(isChecked) {
+            setAnswer([...answer, index]);
+        } else {
+            setAnswer(answer.filter((item: number) => item !== index));
+        }
+    }
+
+
     return (
-        <div>
+        <div className='selectInput'>
             {options && options.items && options.items.map((item: string, index: number) => {
                 return (
-                    <div key={index} className='selectInput'>
+                    <div key={index}>
                         <label>
-                            <input type='checkbox'></input>
+                            <input type='checkbox' onChange={(e) => handleChange(e.target.checked, index)}></input>
                             <span/>
-                            {item}
+                            <div>{item}</div>
                         </label>
                     </div>
                 )

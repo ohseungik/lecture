@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import "@/app/components/ActionButtons/ActionButtons.css";
 
 const ActionButtons: React.FC<{ questionLength: number, step: number }> = ({ questionLength, step }) => {
     const router = useRouter();
@@ -20,7 +21,7 @@ const ActionButtons: React.FC<{ questionLength: number, step: number }> = ({ que
     };
 
     return (
-        <div>
+        <div className='actionButtons'>
             {step === 0 || <button onClick={handlePrevious}>이전</button>}
             <button onClick={handleNext}>{isLastStep ? '제출' : '다음'}</button>
         </div>

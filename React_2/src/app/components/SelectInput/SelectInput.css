@@ -1,5 +1,5 @@
 .selectInput {
-    
+    @apply flex flex-col gap-[24px];
 }
 
 .selectInput input[type='checkbox'] {
@@ -7,13 +7,17 @@
 }
 
 .selectInput input[type='checkbox'] ~ span {
-    @apply w-[24px] h-[24px] border-[3px] border-solid border-gray-500 box-border inline-block rounded-[100%];
+    @apply w-[24px] h-[24px] border-[3px] border-solid border-gray-500 box-border inline-block rounded-[100%] align-middle mr-[10px];
 }
 
 .selectInput input[type='checkbox']:checked ~ span {
     @apply border-[8px] border-blue-500; 
 }
 
-.selectInput div {
-    @apply bg-cyan-500;
+.selectInput input[type='checkbox'] ~ div {
+    @apply text-[14px] leading-[18px] inline-block align-middle; 
+}
+
+.selectInput input[type='checkbox']:checked ~ div {
+    @apply font-bold; 
 }

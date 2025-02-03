@@ -44,8 +44,6 @@ const Survey = ({ params }: {params: Promise<SurveyProps>}) => {
   
   const [answers, setAnswers] = useState<string[]>([]);
 
-  console.log(id);
-
   return (
     <>
         <ProgressIndicator />
